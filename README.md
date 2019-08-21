@@ -23,6 +23,8 @@ cgxCopySNMP.py looks for the following for AUTH, in this order of precedence:
 
 Notice that CloudGenix API calls a claimed ION an element.
 
+Controller port have differnt names on different model. If the script sees that the source interface has the work "controller" in it, it will try all the combination of controller interface names, so you can copy SNMP configs from 2k to 3k or 7k and vice versa.
+
 ## Get existing configuration
 
 ```
