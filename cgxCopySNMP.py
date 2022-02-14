@@ -154,7 +154,7 @@ if __name__ == "__main__":
         t_eid = t_element["id"]
         t_siteid = t_element["site_id"]
         # load the config
-        snmp = yaml.load(args['snmp_file'])
+        snmp = yaml.safe_load(args['snmp_file'])
         # delete existing config
         log.info(f"----- Deleting existing SNMP configs for {args['t_element']}")
         deleteSNMPConfig(cgx,t_siteid,t_eid)
